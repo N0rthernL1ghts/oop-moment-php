@@ -1,5 +1,5 @@
 {
-    "name": "fightbulc/moment",
+    "name": "northern-lights/moment",
     "description": "Parse, validate, manipulate, and display dates in PHP w/ i18n support. Inspired by moment.js",
     "type": "library",
     "keywords": [
@@ -30,6 +30,11 @@
         {
             "name": "Jaroslaw Kozak",
             "email": "jaroslaw.kozak68@gmail.com",
+            "role": "developer"
+        },
+        {
+            "name": "Aleksandar Puharic",
+            "email": "xzero@elite7hackers.net",
             "role": "developer"
         }
     ],
