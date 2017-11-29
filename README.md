@@ -14,6 +14,9 @@
 
 # Intro
 
+### Note
+This version is fork of fightbulc/moment.php and serves just temporary purpose until changes are accepted by maintainer.
+
 ### What is moment.php?
 
 Date library for parsing, manipulating and formatting dates w/ i18n.
@@ -28,10 +31,15 @@ PHP 5.4 or later since moment.php is based on php's [DateTime Class](http://php.
 
 Easy install via composer. Still no idea what composer is? Inform yourself [here](http://getcomposer.org).
 
+```bash
+composer require northern-lights/moment
+```
+
+Or manually adding to composer.json:
 ```json
 {
     "require": {
-        "fightbulc/moment": "*"
+        "northern-lights/moment": "*"
     }
 }
 ```
