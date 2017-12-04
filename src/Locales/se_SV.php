@@ -32,7 +32,7 @@ class se_SV extends LocaleProvider
                 "lastWeek" => '[Förra] l',
                 "sameElse" => 'l',
                 "withTime" => '[kl] H:i',
-                "default"  => 'd.m.Y',
+                "default"  => 'Y-m-d',
             ],
             "relativeTime"  => [
                 "future" => 'om %s',
