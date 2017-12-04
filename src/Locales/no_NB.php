@@ -34,7 +34,7 @@ class no_NB extends LocaleProvider
                 'lastWeek' => '[Forrige] l',
                 'sameElse' => 'l',
                 'withTime' => '[kl] H:i',
-                'default'  => 'Y/m/d',
+                'default'  => 'Y-m-d',
             ],
 
             'relativeTime' => [
