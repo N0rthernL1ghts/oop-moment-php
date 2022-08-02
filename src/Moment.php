@@ -119,7 +119,7 @@ class Moment extends \DateTime
 
         if ($this->immutableMode)
         {
-            return $this->implicitCloning(__FUNCTION__, func_get_args());
+            return $this->implicitCloning(__FUNCTION__, [$dateTime, $timezone]);
         }
 
         // cache dateTime
