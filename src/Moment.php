@@ -119,7 +119,7 @@ class Moment extends \DateTime
 
         if ($this->immutableMode)
         {
-            return $this->implicitCloning(__FUNCTION__, func_get_args());
+            return $this->implicitCloning(__FUNCTION__, [$dateTime, $timezone]);
         }
 
         // cache dateTime
@@ -152,7 +152,7 @@ class Moment extends \DateTime
     {
         if ($this->immutableMode)
         {
-            return $this->implicitCloning(__FUNCTION__, func_get_args());
+            return $this->implicitCloning(__FUNCTION__, [$timezone]);
         }
 
         $this->setTimezoneString($timezone);
@@ -379,7 +379,7 @@ class Moment extends \DateTime
     {
         if ($this->immutableMode)
         {
-            return $this->implicitCloning(__FUNCTION__, func_get_args());
+            return $this->implicitCloning(__FUNCTION__, [$day]);
         }
 
         $this->setDate($this->format('Y'), $this->format('m'), $day);
@@ -397,7 +397,7 @@ class Moment extends \DateTime
     {
         if ($this->immutableMode)
         {
-            return $this->implicitCloning(__FUNCTION__, func_get_args());
+            return $this->implicitCloning(__FUNCTION__, [$month]);
         }
 
         $this->setDate($this->format('Y'), $month, $this->format('d'));
@@ -415,7 +415,7 @@ class Moment extends \DateTime
     {
         if ($this->immutableMode)
         {
-            return $this->implicitCloning(__FUNCTION__, func_get_args());
+            return $this->implicitCloning(__FUNCTION__, [$year]);
         }
 
         $this->setDate($year, $this->format('m'), $this->format('d'));
@@ -526,7 +526,7 @@ class Moment extends \DateTime
     {
         if ($this->immutableMode)
         {
-            return $this->implicitCloning(__FUNCTION__, func_get_args());
+            return $this->implicitCloning(__FUNCTION__, [$year, $month, $day]);
         }
 
         parent::setDate($year, $month, $day);
@@ -544,7 +544,7 @@ class Moment extends \DateTime
     {
         if ($this->immutableMode)
         {
-            return $this->implicitCloning(__FUNCTION__, func_get_args());
+            return $this->implicitCloning(__FUNCTION__, [$second]);
         }
 
         $this->setTime($this->format('H'), $this->format('i'), $second);
@@ -562,7 +562,7 @@ class Moment extends \DateTime
     {
         if ($this->immutableMode)
         {
-            return $this->implicitCloning(__FUNCTION__, func_get_args());
+            return $this->implicitCloning(__FUNCTION__, [$minute]);
         }
 
         $this->setTime($this->format('H'), $minute, $this->format('s'));
@@ -580,7 +580,7 @@ class Moment extends \DateTime
     {
         if ($this->immutableMode)
         {
-            return $this->implicitCloning(__FUNCTION__, func_get_args());
+            return $this->implicitCloning(__FUNCTION__, [$hour]);
         }
 
         $this->setTime($hour, $this->format('i'), $this->format('s'));
@@ -627,7 +627,7 @@ class Moment extends \DateTime
     {
         if ($this->immutableMode)
         {
-            return $this->implicitCloning(__FUNCTION__, func_get_args());
+            return $this->implicitCloning(__FUNCTION__, [$hour, $minute, $second, $microseconds]);
         }
 
         parent::setTime($hour, $minute, $second);
@@ -698,7 +698,7 @@ class Moment extends \DateTime
     {
         if ($this->immutableMode)
         {
-            return $this->implicitCloning(__FUNCTION__, func_get_args());
+            return $this->implicitCloning(__FUNCTION__, [$type, $value]);
         }
 
         parent::modify('+' . $value . ' ' . $type);
@@ -1161,7 +1161,7 @@ class Moment extends \DateTime
     {
         if ($this->immutableMode)
         {
-            return $this->implicitCloning(__FUNCTION__, func_get_args());
+            return $this->implicitCloning(__FUNCTION__, [$rawDateTimeString]);
         }
 
         $this->rawDateTimeString = $rawDateTimeString;
@@ -1186,7 +1186,7 @@ class Moment extends \DateTime
     {
         if ($this->immutableMode)
         {
-            return $this->implicitCloning(__FUNCTION__, func_get_args());
+            return $this->implicitCloning(__FUNCTION__, [$timezoneString]);
         }
 
         $this->timezoneString = $timezoneString;
@@ -1317,7 +1317,7 @@ class Moment extends \DateTime
     {
         if ($this->immutableMode)
         {
-            return $this->implicitCloning(__FUNCTION__, func_get_args());
+            return $this->implicitCloning(__FUNCTION__, [$type, $value]);
         }
 
         parent::modify('-' . $value . ' ' . $type);
